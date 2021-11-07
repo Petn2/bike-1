@@ -2,23 +2,78 @@
     box-sizing: border box;
     margin: 0;
     padding: 0;
-  }
+}
+
 
 
 body {
     text-align: center;
+    padding-top: 100px;
 
 }
 
-#wheel-r {
-    animation: wheel 1s ease;
+
+
+#wheel-r, 
+#wheel-l {
+    animation: wheel 2s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
 }
 
-@keyframes wheel-r {
+@keyframes wheel {
     from{
-        transform: rotateZ(0deg);
+        transform: rotateZ(0deg); 
     }
     to{
         transform: rotateZ(360deg);
     }
+}
+
+
+
+#man, #bike_2 {
+    animation: bike 1s ease-in-out infinite alternate;
+    transform: orgin bottom;
+
+}
+ 
+
+
+@keyframes bike {
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(9deg);
+    }
+}
+
+#flower, #bush {
+
+}
+
+
+
+#flower, #bush {
+    animation: sway1 5s infinite;
+    transform-origin: 50% 100% 0;
+}
+
+@keyframes sway1 {
+    0%, 100%{ transform: rotate(-2deg);}
+    50%{ transform: rotate(2deg); }
+}
+
+
+
+#background {
+    animation: background 5s infinite alternate;
+    animation-timing-function: ease;
+}
+
+@keyframes background {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
 }
