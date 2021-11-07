@@ -5,4 +5,20 @@
   }
 
 
-  
+body {
+    text-align: center;
+
+}
+
+#wheel-r {
+    animation: wheel 1s ease;
+}
+
+@keyframes wheel-r {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
